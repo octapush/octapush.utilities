@@ -1,0 +1,5 @@
+D:\- REPO\- VS REPO\- octapush\Tools\bin\Debug\octapush.Tools.dll
+D:\- REPO\- VS REPO\- octapush\Tools\bin\Debug\octapush.Tools.pdb
+D:\- REPO\- VS REPO\- octapush\Tools\obj\Debug\octapush.Tools.dll
+D:\- REPO\- VS REPO\- octapush\Tools\obj\Debug\octapush.Tools.pdb
+D:\- REPO\- VS REPO\- octapush\Tools\obj\Debug\octapush.Tools.csprojResolveAssemblyReference.cache

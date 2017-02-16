@@ -1,0 +1,7 @@
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\bin\Debug\octapush.DAL.dll
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\bin\Debug\octapush.DAL.pdb
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\obj\Debug\octapush.DAL.csprojResolveAssemblyReference.cache
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\obj\Debug\octapush.DAL.dll
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\obj\Debug\octapush.DAL.pdb
+D:\- REPO\- VS REPO\- octapush\octapush.DAL\bin\Debug\LiteDB.dll

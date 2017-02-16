@@ -1,0 +1,15 @@
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\tester.exe.config
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\tester.exe
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\tester.pdb
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\octapush.SPProcessor.dll
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\octapush.Utilities.dll
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\LiteDB.dll
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\Newtonsoft.Json.dll
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\octapush.SPProcessor.pdb
+D:\- REPO\- VS REPO\- octapush\tester\bin\Debug\octapush.Utilities.pdb
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.csprojResolveAssemblyReference.cache
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.Form1.resources
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.Properties.Resources.resources
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.csproj.GenerateResource.Cache
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.exe
+D:\- REPO\- VS REPO\- octapush\tester\obj\Debug\tester.pdb
