@@ -1,0 +1,284 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="SP Editor" name="description" />
+
+    <title>octapush - SP EDITOR</title>
+
+    <%--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />--%>
+    <link href="~/WebAssets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/WebAssets/css/components-md.css" id="style_components_default" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/WebAssets/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color" />
+    
+    <link rel="stylesheet" type="text/css" href="~/WebAssets/plugins/bootstrap-toastr/toastr.min.css"/>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+
+    <style>
+        .page-logo {
+            font-size: 24pt;
+            font-weight: bold;
+            line-height: 54pt;
+        }
+
+        .page-logo a {
+            color: #ffffff !important;
+        }
+
+        .page-logo a:hover {
+            text-decoration: none !important;
+        }
+
+         /***
+        Notes
+        ***/
+        .note {
+            -moz-border-radius: 0 4px 4px 0;
+            -ms-border-radius: 0 4px 4px 0;
+            -o-border-radius: 0 4px 4px 0;
+            -webkit-border-radius: 0 4px 4px 0;
+            border-left: 5px solid #eee;
+            border-radius: 0 4px 4px 0;
+            margin: 0 0 20px 0;
+            padding: 15px 30px 15px 15px;
+            opacity: 0.7;
+        }
+
+        .note:hover {
+            opacity: 1;
+        }
+        
+        div.note > h4 > a:nth-child(1) {
+            margin-right: -11px !important;
+        }
+
+        .note > h4 > a { display: none !important; }
+
+        .note:hover > h4 > a { display: block !important; }
+
+        .note h1,
+        .note h2,
+        .note h3,
+        .note h4,
+        .note h5,
+        .note h6 { margin-top: 0; }
+
+        .note h1 .close,
+        .note h2 .close,
+        .note h3 .close,
+        .note h4 .close,
+        .note h5 .close,
+        .note h6 .close { margin-right: -10px; }
+
+        .note p { font-size: 13px; }
+
+        .note p:last-child { margin-bottom: 0; }
+
+        .note code,
+        .note .highlight { background-color: #fff; }
+
+        .note.note-default {
+            background-color: lightgray;
+            border-color: #adadad;
+            color: #333333;
+        }
+
+        .note.note-default.note-bordered {
+            background-color: #c3c3c3;
+            border-color: #a0a0a0;
+        }
+
+        .note.note-default.note-shadow {
+            background-color: #c6c6c6;
+            border-color: #a0a0a0;
+            box-shadow: 5px 5px rgba(162, 162, 162, 0.2);
+        }
+
+        .note.note-primary {
+            background-color: #5697d0;
+            border-color: #3085a9;
+            color: #D8E3F2;
+        }
+
+        .note.note-primary.note-bordered {
+            background-color: #3e89c9;
+            border-color: #2a7696;
+        }
+
+        .note.note-primary.note-shadow {
+            background-color: #428bca;
+            border-color: #2a7696;
+            box-shadow: 5px 5px rgba(43, 121, 154, 0.2);
+        }
+
+        .note.note-success {
+            background-color: #eef7ea;
+            border-color: #c9e2b3;
+            color: #3c763d;
+        }
+
+        .note.note-success.note-bordered {
+            background-color: #dcefd4;
+            border-color: #bbdba1;
+        }
+
+        .note.note-success.note-shadow {
+            background-color: #dff0d8;
+            border-color: #bbdba1;
+            box-shadow: 5px 5px rgba(190, 220, 164, 0.2);
+        }
+
+        .note.note-info {
+            background-color: #eef7fb;
+            border-color: #a6e1ec;
+            color: #31708f;
+        }
+
+        .note.note-info.note-bordered {
+            background-color: #d5ebf6;
+            border-color: #91d9e8;
+        }
+
+        .note.note-info.note-shadow {
+            background-color: #d9edf7;
+            border-color: #91d9e8;
+            box-shadow: 5px 5px rgba(150, 219, 233, 0.2);
+        }
+
+        .note.note-warning {
+            background-color: #fcf8e3;
+            border-color: #f5d89e;
+            color: #8a6d3b;
+        }
+
+        .note.note-warning.note-bordered {
+            background-color: #f9f1c7;
+            border-color: #f2cf87;
+        }
+
+        .note.note-warning.note-shadow {
+            background-color: #faf2cc;
+            border-color: #f2cf87;
+            box-shadow: 5px 5px rgba(243, 209, 139, 0.2);
+        }
+
+        .note.note-danger {
+            background-color: #f9f0f0;
+            border-color: #e4b9c0;
+            color: #a94442;
+        }
+
+        .note.note-danger.note-bordered {
+            background-color: #f1dada;
+            border-color: #dca7b0;
+        }
+
+        .note.note-danger.note-shadow {
+            background-color: #f2dede;
+            border-color: #dca7b0;
+            box-shadow: 5px 5px rgba(222, 171, 179, 0.2);
+        }
+    </style>
+</head>
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo ">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="#">
+                    SP EDITOR
+                </a>
+            </div>
+            <!-- END LOGO -->
+
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="separator hide">
+                        </li>
+
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user dropdown dropdown-dark">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <span class="username username-hide-on-mobile">Nick</span>
+                                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                <img alt="" class="img-circle" src="<%: ResolveClientUrl("~/WebAssets/layout/img/avatar9.jpg ") %>"/>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li><a href="extra_profile.html"><i class="icon-rocket"></i> Manage Users </a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html"><i class="icon-key"></i> Log Out </a></li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    
+    <script src="<%: ResolveClientUrl("~/Scripts/octapushJS.js") %>" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/respond.min.js") %>"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/excanvas.min.js") %>"></script> 
+    <![endif]-->
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery-migrate.min.js") %>" type="text/javascript"></script>
+    <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery-ui/jquery-ui.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/bootstrap/js/bootstrap.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery-slimscroll/jquery.slimscroll.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery.blockui.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery.cokie.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/uniform/jquery.uniform.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/bootstrap-switch/js/bootstrap-switch.min.js") %>" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <script src="<%: ResolveClientUrl("~/WebAssets/scripts/metronic.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/layout/scripts/layout.js") %>" type="text/javascript"></script>
+    
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/bootstrap-toastr/toastr.min.js") %>"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/bootbox/bootbox.min.js") %>" type="text/javascript"></script>
+    <script src="<%: ResolveClientUrl("~/WebAssets/plugins/jquery.pulsate.min.js") %>" type="text/javascript"></script>
+
+    <script>
+        $(function() {
+            Metronic.init();
+            Layout.init();
+
+            window.base_path = '<%: ResolveClientUrl("~/") %>';
+        });
+    </script>
+    
+    <asp:ContentPlaceHolder ID="FooterContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+
+</html>
